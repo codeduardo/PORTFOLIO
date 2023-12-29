@@ -38,3 +38,15 @@ main {
 .border-card:hover {
   border: 2px solid #2563eb;
 }
+.border-timeline {
+  border-left: 1px solid #374151;
+}
+.border-linkedin {
+  border: 2px solid #0a66c2;
+}
+.border-gitlab {
+  border: 2px solid #fc6d26;
+}
+.border-github {
+  border: 2px solid #bdbcbc;
+}
