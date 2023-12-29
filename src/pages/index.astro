@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import ResumeIcon from '../icons/ResumeIcon.astro'
+import ExperienceIcon from '../icons/ExperienceIcon.astro'
+import ContactIcon from '../icons/ContactIcon.astro'
+import SendIcon from '../icons/SendIcon.astro'
+import Linkedin from '../icons/Linkedin.astro'
+import GitHub from '../icons/GitHub.astro'
+import GitLab from '../icons/GitLab.astro'
+import ProjectIcon from '../icons/ProjectIcon.astro'
+import ArrowUp from '../icons/ArrowUp.astro'
+import ReactIcon from '../icons/technologies/ReactIcon.astro'
+import TypescriptIcon from '../icons/technologies/TypescriptIcon.astro'
+import ApiIcon from '../icons/technologies/ApiIcon.astro'
+import PostmanIcon from '../icons/technologies/PostmanIcon.astro'
+import ExpressIcon from '../icons/technologies/ExpressIcon.astro'
+import NodeIcon from '../icons/technologies/NodeIcon.astro'
+import MongoIcon from '../icons/technologies/MongoIcon.astro'
+import SqlIcon from '../icons/technologies/SqlIcon.astro'
+import NetIcon from '../icons/technologies/NetIcon.astro'
+import BlazorIcon from '../icons/technologies/BlazorIcon.astro'
+import JestIcon from '../icons/technologies/JestIcon.astro'
+import JSIcon from '../icons/technologies/JSIcon.astro'
+import AstroIcon from '../icons/technologies/AstroIcon.astro'
+
+
+
+import mina1 from "../assets/images/MINALOGO.png"
+import botSeller from "../assets/images/bot-seller.jpg"
+import evolsoft from "../assets/images/evolsoft-logo.png"
+import wellxy from "../assets/images/wellxy-logo.png"
+import track from "../assets/images/track-img.png"
+import portfolio from "../assets/images/portfolio-img.jpg"
+import '../index.css'
+const experiences = [
+{
+	job:'Full Stack Developer',
+	place:'Municipalidad Paratushiali',
+	date:'OCTUBRE 2021 - ENERO 2022',
+	tag:'Prácticas',
+	activities:[
+		'Elaboración de interfaces para la página web a través del uso de la plataforma de diseño Figma.',
+		'Colaboración en la creación de puntos finales (endpoints) y la implementación de interfaces a través de ReactJS.',
+		'Despliegue de la página web.'
+	]
+},
+	{
+	job:'Front-End Developer',
+	date:'FEBRERO 2022 - ABRIL 2022',
+	place:'Instituto médico de la mujer',
+	tag:'Bootcamp',
+	activities:[
+		'Elaboración de aplicación web para la gestión de citas y examenes de los pacientes de IMM.',
+		'Implementación de interfaces a través de ReactJS.',
+	]
+},
+	{
+	job:'Front-End Developer',
+	date:'ABRIL 2022 - SEPTIEMBRE 2022',
+	place:'Solintels',
+	activities:[
+		'Desarrollo de una solución de software especializada para las cooperativas de ahorro y crédito no autorizadas a captar recursos del público (Coopac).',
+		'Implementación de interfaces a través de C# con el framework Blazor.',
+	]
+},
+	{
+	job:'Front-End Developer',
+	date:'SEPTIEMBRE 2022 - OCTUBRE 2023',
+	place:'Mina365',
+	activities:[
+		'Desarrollo de una solución de software especializada para el control logistico de la mina Chinalco.',
+		'Despliegue eficiente de microfrontends para una arquitectura web modular y ágil.',
+		'Implementacion de interfaces mediantes ReactJS y Typescript.',
+		'Colaboración en la interfaces hechas a travez de la plataforma Figma.'
+	]
+},
+
+]
+---
+
+<Layout title="Eduardo Jaucha M.">
+	<main >
+		<!-- Header -->
+		<div class="flex flex-col sm:flex-row align-middle gap-8 w-full ">
+			<div class="flex justify-center items-center">
+				<img src="../../public/chems.webp" class="w-[150px] rounded-full"/>
+			</div>
+			<div class="flex flex-col justify-center">
+				<h1 class="text-[2.5rem] sm:text-[3rem] font-semibold sm:text-start text-center text-blue-500">Eduardo Jaucha Merlo</h1>
+				<span class="text-[1.3rem] sm:text-[1.5rem] mb-4 sm:text-start text-center">Soy un apasionado del desarrollo web.</span>
+				<div class="flex sm:justify-start justify-center">
+					<a href="https://www.canva.com/design/DAF4ZRsbRus/view" target="_blank" class="flex items-center justify-center px-4 py-2 rounded-md gap-4 border-2 border-blue-500 transform transition duration-500 hover:scale-110" target="_blank">
+						<ResumeIcon/>
+						<span class="text-blue-500 text-[1.3rem] mt-1">Resume</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<hr class="my-8"/>
+		<!-- Expiriences -->
+		<section>
+			<div class="flex items-center mb-8 gap-4">
+				<h2 class="text-[2.2rem] font-semibold">Experiencia</h2>
+				<ExperienceIcon/>
+			</div>
+			<ol class="relative border-s border-gray-200 dark:border-gray-700">       
+				{experiences.map(item=>(<ExperienceItem {...item} />))}       
+			</ol>
+
+
+		</section>
+		<!-- Projects -->
+		<section>
+			<div class="flex items-center mb-8 gap-4">
+				<h2 class="text-[2.2rem] font-semibold">Proyectos</h2>
+			<ProjectIcon/>
+			</div>
+			<div class="relative border-2 border-[#a6bfd3] group hover:border-blue-600 transition duration-500 w-full  rounded-lg mb-8 p-8 grid sm:grid-cols-2 grid-cols-1 grid-flow-row gap-6">
+				<div class="absolute z-10 top-0 end-0 px-4 py-2 bg-blue-600 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+					Proyecto privado
+				</div>
+				<div class="flex justify-center items-center rounded-sm">
+					<img src={mina1.src} class="aspect-video rounded-lg transform transition duration-500 hover:scale-105"/>
+				</div>
+				<div>
+					<h3 class="text-[1.6rem] font-semibold mb-4 text-blue-500">Control logístico</h3> 
+					<span class="text-[1.2rem] ">Lleve a cabo el desarrollo de una aplicación integral, aplicando rigurosamente principios de clean architecture y buenas prácticas de desarrollo. La separación efectiva de capas mejoró la modularidad y mantenibilidad del código, haciendo posible la introducción eficiente de nuevas características. Mi enfoque también se centró en la experiencia del usuario, asegurando interfaces intuitivas y altamente funcionales.</span>
+					<div class="flex mt-4 gap-6">
+						<ReactIcon/>
+						<TypescriptIcon/>
+						<ApiIcon/>
+						<PostmanIcon/>
+					</div>
+				</div>
+			</div>
+			<div class="relative border-2 border-[#a6bfd3] group hover:border-blue-600 transition duration-500 w-full  rounded-lg mb-8 p-8 grid sm:grid-cols-2 grid-cols-1 grid-flow-row gap-6">
+				<div class="absolute z-10 top-0 end-0 px-4 py-2 bg-blue-600 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+					Proyecto privado
+				</div>
+				<div class="flex justify-center items-center rounded-sm">
+					<img src={botSeller.src} class="aspect-video rounded-lg transform transition duration-500 hover:scale-105"/>
+				</div>
+				<div>
+					<h3 class="text-[1.6rem] font-semibold mb-4 text-blue-500">Bot Seller</h3> 
+					<span class="text-[1.2rem] ">
+						Se desarrollo un bot seller, intervine en gran parte el desarrollo integral del frontend y backend, aplicando buenas prácticas y código limpio. En el frontend, diseñé una interfaz intuitiva bajo clean code, mientras que en el backend adopté una arquitectura escalable y segura mejorando tanto la calidad técnica como la adaptabilidad futura de la aplicación.</span>
+					<div class="flex mt-4 gap-6">
+						<ReactIcon/>
+						<TypescriptIcon/>
+						<NodeIcon/>
+						<ExpressIcon/>
+						<SqlIcon/>
+					</div>
+				</div>
+			</div>
+			<div class="relative border-2 border-[#a6bfd3] group hover:border-blue-600 transition duration-500 w-full  rounded-lg mb-8 p-8 grid sm:grid-cols-2 grid-cols-1 grid-flow-row gap-6">
+				<div class="absolute z-10 top-0 end-0 px-4 py-2 bg-blue-600 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+					Proyecto privado
+				</div>
+				<div class="flex justify-center items-center rounded-sm">
+					<img src={evolsoft.src} class="aspect-video rounded-lg transform transition duration-500 hover:scale-105"/>
+				</div>
+				<div>
+					<h3 class="text-[1.6rem] font-semibold mb-4 text-blue-500">Bot Seller</h3> 
+					<span class="text-[1.2rem] ">						
+						Se desarrollo un proyecto .NET, para el cual apliqué principios SOLID y buenas prácticas para lograr la modularidad y la extensibilidad del código. Implementé el principio de responsabilidad única y la inversión de dependencias asegurando componentes intercambiables. La estructura se basó en la separación de preocupaciones con patrones como el repositorio y la inyección de dependencias.</span>
+					<div class="flex mt-4 gap-6">
+						<NetIcon/>
+						<BlazorIcon/>
+					</div>
+				</div>
+			</div>
+			<div class="grid sm:grid-cols-2 grid-cols-1 grid-flow-row gap-4">
+				<div class="relative h-[15rem] border-2 border-[#a6bfd3] group hover:border-blue-600 transition duration-500  w-full  rounded-lg mb-8 p-8 grid grid-cols-2 grid-flow-row gap-6">
+					<div class="absolute top-0 end-0 px-4 py-2 bg-blue-600 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+						Proyecto privado
+					</div>
+					<div class="flex justify-center items-center rounded-sm">
+						<img src={wellxy.src} class="aspect-video rounded-lg transform transition duration-500 hover:scale-105"/>
+					</div>
+					<div>
+						<h3 class="text-[1.6rem] font-semibold mb-4 text-blue-500">Wellxy</h3> 
+						
+						<div class="flex mt-4 gap-6">
+							<NodeIcon/>
+							<ExpressIcon/>
+							<SqlIcon/>
+						</div>
+					</div>
+				</div>
+				<div class="relative h-[15rem] border-2 border-[#a6bfd3] group hover:border-blue-600 transition duration-500  w-full  rounded-lg mb-8 p-8 grid grid-cols-2 grid-flow-row gap-6">
+					<a href="https://github.com/codeduardo/Tracks-API" target="_blank" class="absolute top-0 end-0 px-4 py-2 bg-blue-600 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 cursor-pointer">
+						<ArrowUp/>
+					</a>
+					<div class="flex justify-center items-center rounded-sm">
+						<img src={track.src} class="aspect-video rounded-lg transform transition duration-500 hover:scale-105"/>
+					</div>
+					<div>
+						<h3 class="text-[1.6rem] font-semibold mb-4 text-blue-500">Track API</h3> 
+						
+						<div class="flex mt-4 gap-6">
+							<MongoIcon/>
+							<JestIcon/>
+							<NodeIcon/>
+						</div>
+					</div>
+				</div>
+				<div class="relative h-[15rem] border-2 border-[#a6bfd3] group hover:border-blue-600 transition duration-500  w-full  rounded-lg mb-8 p-8 grid grid-cols-2 grid-flow-row gap-6">
+					<a href="#" target="_blank" class="absolute top-0 end-0 px-4 py-2 bg-blue-600 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 cursor-pointer">
+						<ArrowUp/>
+					</a>
+					<div class="flex justify-center items-center rounded-sm">
+						<img src={portfolio.src} class="aspect-video rounded-lg transform transition duration-500 hover:scale-105"/>
+					</div>
+					<div>
+						<h3 class="text-[1.6rem] font-semibold mb-4 text-blue-500">Portfolio</h3> 
+						
+						<div class="flex mt-4 gap-6">
+							<JSIcon/>
+							<AstroIcon/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Socials  -->
+		<section>
+			<div class="flex items-center mb-8 mt-4 gap-4">
+				<h2 class="text-[2.2rem] font-semibold">Redes sociales</h2>
+				<svg class="w-7 h-7 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+					<path d="M16 0H4a2 2 0 0 0-2 2v1H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v2H1a1 1 0 0 0 0 2h1v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM13.929 17H7.071a.5.5 0 0 1-.5-.5 3.935 3.935 0 1 1 7.858 0 .5.5 0 0 1-.5.5Z"/>
+				</svg>
+			</div>
+			<div class="flex gap-4 w-full">
+				<a href="https://www.linkedin.com/in/eduardo-jaucha-8980a0206/" target="_blank" class="flex align-middle items-center gap-2 border-2 border-[#0A66C2] py-2 px-4 rounded-lg transform transition duration-500 hover:scale-110">
+					<Linkedin/>
+					<span class="text-[1.4rem] text-[#0A66C2] font-semibold">Linkedin</span>
+				</a>
+				<a href="https://github.com/codeduardo" target="_blank" class="flex align-middle items-center gap-2 border-2 border-[#bdbcbc] py-2 px-4 rounded-lg transform transition duration-500 hover:scale-110">
+					<GitHub/>
+					<span class="text-[1.4rem] text-[#bdbcbc] font-semibold">Github</span>
+				</a>
+				<a href="https://gitlab.com/agredu1234" target="_blank" class="flex align-middle items-center gap-2 border-2 border-[#FC6D26] py-2 px-4 rounded-lg transform transition duration-500 hover:scale-110">
+					<GitLab/>
+					<span class="text-[1.4rem] text-[#FC6D26] font-semibold">Gitlab</span>
+				</a>
+			</div>
+		</section>
+		<section >
+				<div class="flex items-center my-8 gap-4">
+					<h2 class="text-[2.2rem] font-semibold">Contáctame</h2>
+					<ContactIcon/>
+				</div>
+				<div class="flex gap-4 w-full justify-between h-[42px]">
+					<input class="block px-2.5 bg-transparent border-2 border-gray-300 dark:border-gray-700 transition-colors duration-200 pb-2.5 pt-4  text-[1.4rem] w-full focus:border-gray-400 dark:focus:border-gray-600 rounded-lg appearance-none focus:outline-none focus:ring-0 peer" disabled value="agredu1234@gmail.com"/>
+					<a href="https://www.google.com/intl/es-419/gmail/about/" target="_blank" class="bg-[#9d4cae] rounded-md flex items-center px-4">
+						<SendIcon/>
+					</a>
+				</div>
+		</section>
+	</main>
+</Layout>
