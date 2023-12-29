@@ -31,3 +31,10 @@ main {
   padding: 20px;
   background: var(--main-color);
 }
+
+.border-card {
+  border: 2px solid #a6bfd3;
+}
+.border-card:hover {
+  border: 2px solid #2563eb;
+}
