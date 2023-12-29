@@ -31,6 +31,7 @@ import evolsoft from "../assets/images/evolsoft-logo.png"
 import wellxy from "../assets/images/wellxy-logo.png"
 import track from "../assets/images/track-img.png"
 import portfolio from "../assets/images/portfolio-img.jpg"
+import edu from "../assets/images/edu-img.jpg"
 import '../index.css'
 const experiences = [
 {
@@ -83,7 +84,9 @@ const experiences = [
 		<!-- Header -->
 		<div class="flex flex-col sm:flex-row align-middle gap-8 w-full ">
 			<div class="flex justify-center items-center">
-				<img src="../../public/chems.webp" class="w-[150px] rounded-full"/>
+				<div class="w-[150px] h-[150px] rounded-full overflow-hidden">
+					<img src={edu.src} class="mb-10"/>
+				</div>
 			</div>
 			<div class="flex flex-col justify-center">
 				<h1 class="text-[2.5rem] sm:text-[3rem] font-semibold sm:text-start text-center text-blue-500">Eduardo Jaucha Merlo</h1>
