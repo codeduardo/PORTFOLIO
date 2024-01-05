@@ -35,6 +35,9 @@ main {
 .border-card {
   border: 2px solid #a6bfd3;
 }
+.border-email {
+  border: 2px solid #374151;
+}
 .border-card:hover {
   border: 2px solid #2563eb;
 }
